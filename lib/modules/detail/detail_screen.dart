@@ -1,4 +1,5 @@
 import 'package:bmi_app_getx/modules/detail/detail_controller.dart';
+import 'package:bmi_app_getx/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_chat_bubble/bubble_type.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_1.dart';
 import 'package:get/get.dart';
 
-class DetailScreen extends GetView<DetailsController> {
+class DetailScreen extends GetView<HomeController> {
   const DetailScreen({super.key});
 
   @override
@@ -45,7 +46,7 @@ class DetailScreen extends GetView<DetailsController> {
                 Container(
                   margin: const EdgeInsets.only(top: 15),
                   child: Text(
-                    controller.bmiScore!.substring(0, 3),
+                    controller.bmiScore.toStringAsFixed(2),
                     style: const TextStyle(
                         color: Color(0xff66CFA6),
                         fontWeight: FontWeight.bold,
@@ -88,9 +89,7 @@ class DetailScreen extends GetView<DetailsController> {
                         clipper:
                             ChatBubbleClipper1(type: BubbleType.receiverBubble),
                         backGroundColor:
-                            controller.bmiStatusColor.toString() == "green"
-                                ? Colors.green
-                                : Colors.red,
+                            controller.bmiStatusColor,
                         margin: const EdgeInsets.only(top: 30),
                         child: Container(
                           constraints: BoxConstraints(

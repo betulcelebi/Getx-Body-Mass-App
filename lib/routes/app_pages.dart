@@ -16,7 +16,7 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL,
       page: () => const DetailScreen(),
-      binding: DetailBinding(),
+      binding: HomeBinding(),
     )
   ];
 }

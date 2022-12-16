@@ -15,10 +15,10 @@ class HomeScreen extends GetView<HomeController> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 100, right: 60, left: 25),
+                margin: const EdgeInsets.only(top: 100, right: 60, left: 25),
                 width: 400,
                 height: 100,
-                child: Text(
+                child: const Text(
                   "Let`s calculate your current BMI",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -27,10 +27,10 @@ class HomeScreen extends GetView<HomeController> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10, right: 60, left: 25),
+                margin: const EdgeInsets.only(top: 10, right: 60, left: 25),
                 width: 400,
                 height: 50,
-                child: Text(
+                child: const Text(
                   "You can find out whether you are overweight, underweight or ideal weight.",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -38,72 +38,70 @@ class HomeScreen extends GetView<HomeController> {
                       color: Color.fromARGB(255, 116, 115, 115)),
                 ),
               ),
-              Container(
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(left: 25, top: 35),
-                      alignment: Alignment.center,
-                      width: 92,
-                      height: 45,
-                      decoration: BoxDecoration(
+              Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(left: 25, top: 35),
+                    alignment: Alignment.center,
+                    width: 92,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 197, 194, 194)),
+                      borderRadius: BorderRadius.circular(30),
+                      color: const Color.fromARGB(255, 90, 90, 90),
+                    ),
+                    child: const Text(
+                      "Female",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 15, top: 35),
+                    alignment: Alignment.center,
+                    width: 95,
+                    height: 45,
+                    decoration: BoxDecoration(
                         border: Border.all(
-                            color: Color.fromARGB(255, 197, 194, 194)),
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 90, 90, 90),
-                      ),
-                      child: Text(
-                        "Female",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14),
-                      ),
+                            color: const Color.fromARGB(255, 197, 194, 194)),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: const Text(
+                      "Male",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 117, 116, 116),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 15, top: 35),
-                      alignment: Alignment.center,
-                      width: 95,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromARGB(255, 197, 194, 194)),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Text(
-                        "Male",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 117, 116, 116),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14),
-                      ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 15, top: 35),
+                    alignment: Alignment.center,
+                    width: 95,
+                    height: 45,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 197, 194, 194)),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: const Text(
+                      "Other",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 117, 116, 116),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 15, top: 35),
-                      alignment: Alignment.center,
-                      width: 95,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromARGB(255, 197, 194, 194)),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Text(
-                        "Other",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 117, 116, 116),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               Container(
                 width: double.infinity,
                 height: 50,
-                margin: EdgeInsets.only(top: 35),
-                padding: EdgeInsets.all(0),
+                margin: const EdgeInsets.only(top: 35),
+                padding: const EdgeInsets.all(0),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 30,
                   ),
                   child: TextFormField(
@@ -111,8 +109,8 @@ class HomeScreen extends GetView<HomeController> {
                       LengthLimitingTextInputFormatter(3),
                       FilteringTextInputFormatter.digitsOnly
                     ],
-                    cursorColor: Color.fromARGB(255, 117, 116, 116),
-                    decoration: InputDecoration(
+                    cursorColor: const Color.fromARGB(255, 117, 116, 116),
+                    decoration: const InputDecoration(
                       label: Text.rich(
                         TextSpan(
                           children: <InlineSpan>[
@@ -133,17 +131,18 @@ class HomeScreen extends GetView<HomeController> {
                         ),
                       ),
                     ),
-                    style: TextStyle(color: Color.fromARGB(255, 136, 136, 136)),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 136, 136, 136)),
                   ),
                 ),
               ),
               Container(
                 width: double.infinity,
                 height: 50,
-                margin: EdgeInsets.only(top: 15),
-                padding: EdgeInsets.all(0),
+                margin: const EdgeInsets.only(top: 15),
+                padding: const EdgeInsets.all(0),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 30,
                   ),
                   child: TextFormField(
@@ -153,11 +152,11 @@ class HomeScreen extends GetView<HomeController> {
                     ],
                     onChanged: (value) {
                       if (value.isNotEmpty) {
-                        controller.height.value = double.parse(value);
+                        controller.height = double.parse(value);
                       }
                     },
-                    cursorColor: Color.fromARGB(255, 117, 116, 116),
-                    decoration: InputDecoration(
+                    cursorColor: const Color.fromARGB(255, 117, 116, 116),
+                    decoration: const InputDecoration(
                       label: Text.rich(
                         TextSpan(
                           children: <InlineSpan>[
@@ -178,16 +177,17 @@ class HomeScreen extends GetView<HomeController> {
                         ),
                       ),
                     ),
-                    style: TextStyle(color: Color.fromARGB(255, 136, 136, 136)),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 136, 136, 136)),
                   ),
                 ),
               ),
               Container(
                 width: double.infinity,
                 height: 50,
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextFormField(
                     inputFormatters: [
                       LengthLimitingTextInputFormatter(3),
@@ -195,12 +195,12 @@ class HomeScreen extends GetView<HomeController> {
                     ],
                     onChanged: (value) {
                       if (value.isNotEmpty) {
-                        controller.weight.value = double.parse(value);
+                        controller.weight = double.parse(value);
                       }
                     },
                     cursorWidth: 1,
-                    cursorColor: Color.fromARGB(255, 73, 165, 241),
-                    decoration: InputDecoration(
+                    cursorColor: const Color.fromARGB(255, 73, 165, 241),
+                    decoration: const InputDecoration(
                       label: Text.rich(
                         TextSpan(
                           children: <InlineSpan>[
@@ -223,18 +223,21 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                     textAlign: TextAlign.start,
-                    style: TextStyle(color: Color.fromARGB(255, 136, 136, 136)),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 136, 136, 136)),
                   ),
                 ),
               ),
               GestureDetector(
-                onTap: () => controller.isBMIControl(),
+                onTap: () {
+                  controller.isBMIControl();
+                },
                 child: Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 160),
+                  margin: const EdgeInsets.only(top: 160),
                   width: 350,
                   height: 50,
-                  child: Text(
+                  child: const Text(
                     "Calculate BMI",
                     style: TextStyle(
                         color: Color.fromARGB(255, 250, 245, 245),
@@ -243,9 +246,9 @@ class HomeScreen extends GetView<HomeController> {
                   ),
                   decoration: BoxDecoration(
                       border: Border.all(
-                        color: Color(0xff468FF8),
+                        color: const Color(0xff468FF8),
                       ),
-                      color: Color(0xff468FF8),
+                      color: const Color(0xff468FF8),
                       borderRadius: BorderRadius.circular(30)),
                 ),
               ),
